@@ -1,0 +1,23 @@
+server:
+  port: 8080
+  tomcat:
+    uri-encoding: UTF-8
+
+spring:
+  data:
+    elasticsearch:
+      repositories:
+        enabled: true
+      cluster-name: elasticsearch
+      cluster-nodes: localhost:9300
+
+
+# 日志配置
+logging:
+  config: classpath:logback-spring.xml
+  # 日志输出根路径
+  exportPath: d://springboot-es/logs
+  level:
+    com.johndoeo.demo: debug
+    org.springframework: WARN
+    org.spring.springboot.dao: debug
